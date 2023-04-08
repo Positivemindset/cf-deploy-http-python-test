@@ -1,14 +1,10 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  entrypoint: 'bash'
   args:
-    - '-c'
-    - |
-      gcloud functions deploy hello_world1 \
-        --region=europe-west2 \
-        --entry-point=hello_world1\
-        --runtime=python37 \
-        --source=/python \
-        --memory=256 MB\
-        --trigger-http \
-        --allow-unauthenticated
+    - functions
+    - deploy
+    - hello_world1
+    - --source=.
+    - --trigger-http
+    - --runtime=python37
+    - --allow-unauthenticated
