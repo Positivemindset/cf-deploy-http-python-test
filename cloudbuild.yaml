@@ -8,4 +8,3 @@ steps:
     - --trigger-http
     - --runtime=python37
     - --allow-unauthenticated
-serviceAccount: hostproject-379219@appspot.gserviceaccount.com
