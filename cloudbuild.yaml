@@ -1,13 +1,23 @@
+# steps:
+# - name: 'python:3.8'
+#   entrypoint: 'pip'
+#   args: ['install', '-r', 'requirements.txt', '-t', './']
+# - name: 'gcr.io/cloud-builders/gcloud'
+#   args:
+#     - functions
+#     - deploy
+#     - hello_world1
+#     - --source=.
+#     - --trigger-http
+#     - --runtime=python37
+#     - --allow-unauthenticated
 steps:
-- name: 'python:3.8'
-  entrypoint: 'pip'
-  args: ['install', '-r', 'requirements.txt', '-t', './']
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
     - functions
     - deploy
     - hello_world1
-    - --source=.
+    - --source=./hello-world1.zip
     - --trigger-http
-    - --runtime=python37
+    - --runtime=python39
     - --allow-unauthenticated
