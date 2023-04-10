@@ -16,7 +16,7 @@ steps:
   args:
     - functions
     - deploy
-    - hello_world1
+    - fetch_data_option1_cf
     - --source=.
     - --trigger-http
     - --runtime=python39
