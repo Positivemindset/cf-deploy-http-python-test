@@ -17,7 +17,7 @@ steps:
     - functions
     - deploy
     - hello_world1
-    - --source=./hello-world1.zip
+    - --source=.
     - --trigger-http
     - --runtime=python39
     - --allow-unauthenticated
